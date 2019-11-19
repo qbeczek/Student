@@ -61,6 +61,7 @@ Grupa& Grupa::operator++(int)
     }
 }
 
+
 Grupa::Grupa(int liczbaStudentow)
 {
         Student Studenci[liczbaStudentow];
@@ -92,6 +93,7 @@ void Grupa::wyswietl(int liczbaStudentow)
 void Grupa::_zwiekszPamiec(int liczbaStudentow)
 {
     *this = Grupa(liczbaStudentow);
+    std::cout << "zwiekszam Pamiec" << std::endl;
 }
 
 void Grupa::dodajZwieksz(int liczbaStudentow)
@@ -99,3 +101,10 @@ void Grupa::dodajZwieksz(int liczbaStudentow)
     _zwiekszPamiec(liczbaStudentow+1);
     Studenci[liczbaStudentow+1].wez(liczbaStudentow+1);
 }
+
+Grupa Grupa::operator+=(int liczbaStudentow)
+{
+    _zwiekszPamiec(liczbaStudentow+1);
+    Studenci[liczbaStudentow+1].wez(liczbaStudentow+1);
+}
+

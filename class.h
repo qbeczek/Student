@@ -29,7 +29,7 @@ class Grupa
 public:
      Grupa(int liczbaStudentow);
      Grupa& operator++(int);
-
+     Grupa operator+=(int);
 
      ~Grupa();
 

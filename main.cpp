@@ -13,7 +13,7 @@ int main()
         grupa1.dodajZwieksz(size);
         grupa1.wyswietl(size+2);
 
-        grupa1.dodajZwieksz(size+1);
+        grupa1+=size+1;
         grupa1.wyswietl(size+3);
 
         return 0;
