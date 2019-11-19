@@ -35,7 +35,9 @@ public:
 
      void wypelnij(int liczbaStudentow);
      void wyswietl(int liczbaStudentow);
-     void _zwiekszPamiec(Grupa& agrupa,int liczbaStudentow);
+
+     void _zwiekszPamiec(int liczbaStudentow);
+     void dodajZwieksz(int);
 };
 
 #endif // CLASS_H

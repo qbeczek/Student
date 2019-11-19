@@ -88,27 +88,16 @@ void Grupa::wyswietl(int liczbaStudentow)
     }
 }
 
-//void Grupa::_zwiekszPamiec(int liczbaStudentow)
-//{
-//    int x = liczbaStudentow+1;
-//    Grupa(x);
-//}
-
-void Grupa::_zwiekszPamiec(Grupa& agrupa, int liczbaStudentow)
+void Grupa::_zwiekszPamiec(int liczbaStudentow)
 {
-        int x = liczbaStudentow+1;
-        Grupa temp(x);
-
-        for(int i=0; i<x-1; i++)
-        {
-            temp.Studenci[i] = agrupa.Studenci[i];
-            std::cout << i;
-        }
-        std::cout << " " <<std::endl;
-
-       temp.Studenci[x].wez();
-       //std::cout << temp.Studenci[x].oddaj() <<std::endl;
-
+    *this = Grupa(liczbaStudentow + 1);
 }
+
+void Grupa::dodajZwieksz(int liczbaStudentow)
+{
+    _zwiekszPamiec(liczbaStudentow);
+    Studenci[liczbaStudentow+1].wez();
+}
+
 
 
