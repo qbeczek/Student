@@ -74,7 +74,7 @@ Grupa::~Grupa()
 void  Grupa::wypelnij(int liczbaStudentow)
 {
     Studenci[0].ustaw();
-    for(int i=0;i<liczbaStudentow;i++)
+    for(int i=0;i<liczbaStudentow;++i)
     {
         Student pom=Studenci[i];
         Studenci[i+1]=pom;
@@ -83,7 +83,7 @@ void  Grupa::wypelnij(int liczbaStudentow)
 
 void Grupa::wyswietl(int liczbaStudentow)
 {
-    for(int i=0;i<liczbaStudentow;i++)
+    for(int i=0;i<liczbaStudentow;++i)
     {
         std::cout<<"ocena studenta "<< Studenci[i].oddajNumer() <<" = "<<Studenci[i].oddaj()<<std::endl;
     }
@@ -91,14 +91,11 @@ void Grupa::wyswietl(int liczbaStudentow)
 
 void Grupa::_zwiekszPamiec(int liczbaStudentow)
 {
-    *this = Grupa(liczbaStudentow + 1);
+    *this = Grupa(liczbaStudentow);
 }
 
 void Grupa::dodajZwieksz(int liczbaStudentow)
 {
-    _zwiekszPamiec(liczbaStudentow);
+    _zwiekszPamiec(liczbaStudentow+1);
     Studenci[liczbaStudentow+1].wez(liczbaStudentow+1);
 }
-
-
-
