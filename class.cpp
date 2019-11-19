@@ -35,9 +35,10 @@ int Student::oddajNumer()
     return numer;
 }
 
-void Student::wez()
+void Student::wez(int liczbaStudentow)
 {
     std::cin>>ocena;
+    numer = liczbaStudentow + 1;
     sprawdz();
 }
 
@@ -96,7 +97,7 @@ void Grupa::_zwiekszPamiec(int liczbaStudentow)
 void Grupa::dodajZwieksz(int liczbaStudentow)
 {
     _zwiekszPamiec(liczbaStudentow);
-    Studenci[liczbaStudentow+1].wez();
+    Studenci[liczbaStudentow+1].wez(liczbaStudentow+1);
 }
 
 

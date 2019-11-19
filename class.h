@@ -15,7 +15,7 @@ public:
     void sprawdz();
     int oddaj();
     int oddajNumer();
-    void wez();
+    void wez(int);
     void ustaw();
     void zwiekszOcene();
 
